@@ -1,5 +1,5 @@
-import { Component, input } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, input, output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Task } from '../../models/task';
 
 @Component({
@@ -10,6 +10,7 @@ import { Task } from '../../models/task';
 })
 export class TaskForm {
   task = input<Task | null>(null);
+  onCancel = output<void>();
 
     formData = {
       title: '',
@@ -18,6 +19,7 @@ export class TaskForm {
     }
 
     onSubmit(){
+      if(this.formData.title && this.formData.description){
       const newTask: Task = {
         id: +new Date,
         title: this.formData.title,
@@ -27,4 +29,5 @@ export class TaskForm {
       }
       console.log(newTask);
     }
+  }
 }
