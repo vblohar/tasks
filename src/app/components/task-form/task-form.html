@@ -1,4 +1,5 @@
-<form (ngSubmit)="onSubmit()" class="task-form">
+<div class="task-form">
+<form (ngSubmit)="onSubmit()" class="form">
     <h3>{{task() ? 'Edit Task' : 'Create New Task'}}</h3>
     <div class="form-group">
         <label for="title">Title: </label>
@@ -17,3 +18,4 @@
     </div>
 
 </form>
+</div>
