@@ -1,1 +1,14 @@
-<p>task-item works!</p>
+<div class="task-item" [class.completed]="task()?.completed">
+    <div class="task-info">
+        <input type="checkbox" [checked]="task()?.completed" (change)="onToggleComplete()" class="task-checkbox">
+        <div class="task-details">
+            <h4>{{ task()?.title }}</h4>
+            <p>{{ task()?.description }}</p>
+            <small>Created: {{ task()?.createdAt | date }}</small>
+        </div>
+    </div>
+    <div class="task-actions">
+        <!-- <button (click)="onEdit.emit(task())" class="btn btn-edit">Edit</button>
+        <button (click)="onDelete.emit(task().id)" class="btn btn-delete">Delete</button> -->
+    </div>
+</div>
