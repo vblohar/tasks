@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TaskItem } from "./components/task-item/task-item";
-import { TaskForm } from "./components/task-form/task-form";
+import { TaskItem } from "./components/main-block/task-item/task-item";
+import { TaskForm } from "./components/main-block/task-form/task-form";
 import { Header } from './header/header';
 
 @Component({
