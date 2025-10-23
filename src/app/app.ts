@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { TaskItem } from "./components/main-block/task-item/task-item";
 import { TaskForm } from "./components/main-block/task-form/task-form";
 import { Header } from './header/header';
+import { MainBlock } from "./components/main-block/main-block";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TaskItem, TaskForm, Header],
+  imports: [RouterOutlet, Header, MainBlock],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
