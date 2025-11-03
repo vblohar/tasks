@@ -1,0 +1,30 @@
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+        <form class="login-form" (ngSubmit)="onLogin()">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input 
+                type="email"
+                id="email"
+                [(ngModel)] = "creditials.email"
+                name="email"
+                required
+                class="form-control">
+            </div>
+            <div class="from-group">
+                <label for="password">Password:</label>
+                <input type="password"
+                id="password"
+                [(ngModel)]="creditials.password"
+                name="password"
+                required
+                class="from-control">
+            </div>
+            <button
+            type="submit"
+            class="btn btn-primary"
+           ></button>
+        </form>
+    </div>
+</div>
